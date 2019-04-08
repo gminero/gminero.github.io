@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Salesforce Tek Talks  | Lwc Aura Wrappers</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.54.0" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.955516233bcafa4d2a1c13cea63c7b50.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+<link rel="shortcut icon" href="//img/cloud_wrench.png" type="image/x-icon" />
+
+    
+
+    
+
+    <meta property="og:title" content="Lwc Aura Wrappers" />
+<meta property="og:description" content="In this post, we will create an Aura wrapper component around or LWC that fires an APP event to an external Aura component. Wrapping your LWC will help you communicate with other aura components that cannot or have not been migrated to LWC.
+Getting Started You will need to get yourself setup with Salesforce-DX, if you haven&rsquo;t had the chance to do so, this is a good time to get your environemnt setup since we will use it to deploy our LWC to a scratch org for testing." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://gminero.github.io/posts/lwc-aura-wrappers/" />
+<meta property="article:published_time" content="2019-04-08T10:52:13-04:00"/>
+<meta property="article:modified_time" content="2019-04-08T10:52:13-04:00"/>
+
+<meta itemprop="name" content="Lwc Aura Wrappers">
+<meta itemprop="description" content="In this post, we will create an Aura wrapper component around or LWC that fires an APP event to an external Aura component. Wrapping your LWC will help you communicate with other aura components that cannot or have not been migrated to LWC.
+Getting Started You will need to get yourself setup with Salesforce-DX, if you haven&rsquo;t had the chance to do so, this is a good time to get your environemnt setup since we will use it to deploy our LWC to a scratch org for testing.">
+
+
+<meta itemprop="datePublished" content="2019-04-08T10:52:13-04:00" />
+<meta itemprop="dateModified" content="2019-04-08T10:52:13-04:00" />
+<meta itemprop="wordCount" content="769">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Lwc Aura Wrappers"/>
+<meta name="twitter:description" content="In this post, we will create an Aura wrapper component around or LWC that fires an APP event to an external Aura component. Wrapping your LWC will help you communicate with other aura components that cannot or have not been migrated to LWC.
+Getting Started You will need to get yourself setup with Salesforce-DX, if you haven&rsquo;t had the chance to do so, this is a good time to get your environemnt setup since we will use it to deploy our LWC to a scratch org for testing."/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://gminero.github.io/" class="f3 fw2 hover-white no-underline white-90 dib">
+      Salesforce Tek Talks
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="Blog page">
+              Blog
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">Lwc Aura Wrappers</h1>
+      
+      <time class="f6 mv4 dib tracked" datetime="2019-04-08T10:52:13-04:00">April 8, 2019</time>      
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+
+<p>In this post, we will create an Aura wrapper component around or LWC that fires an APP event to an external Aura component.
+Wrapping your LWC will help you communicate with other aura components that cannot or have not been migrated to LWC.</p>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<p>You will need to get yourself setup with <a href="https://trailhead.salesforce.com/en/content/learn/trails/sfdx_get_started">Salesforce-DX</a>, if you haven&rsquo;t had the chance to do so, this is a good time to get your environemnt setup since we will use it to deploy our LWC to a scratch org for testing.</p>
+
+<h2 id="steps-to-do">Steps To do</h2>
+
+<ul>
+<li><a href="#Start-your-project">Start your project</a></li>
+<li><a href="#create-your-lwc">Create your LWC</a></li>
+<li><a href="#component-markup">Component Markup</a></li>
+<li><a href="#component-controller">Component Controller</a></li>
+<li><a href="#create-your-aura-wrapper">Create your Aura Wrapper</a></li>
+<li><a href="#aura-component-markup">Aura Component Markup</a></li>
+<li><a href="#aura-component-controller">Aura Component Controller</a></li>
+<li><a href="#create-your-aura-listener">Create your Aura Listener</a></li>
+<li><a href="#listener-component-markup">Listener Component Markup</a></li>
+<li><a href="#listener-component-controller">Listener Component Controller</a></li>
+</ul>
+
+<hr />
+
+<h2 id="start-your-project">Start your project</h2>
+
+<blockquote>
+<p>sample project-scratch-def.json</p>
+</blockquote>
+
+<pre><code>
+{
+  &quot;orgName&quot;: &quot;CaseCreation Demo&quot;,
+  &quot;edition&quot;: &quot;Developer&quot;,
+  &quot;features&quot;: [&quot;Communities&quot;, &quot;Sites&quot;, &quot;SiteDotCom&quot;],
+  &quot;hasSampleData&quot;: &quot;false&quot;,
+  &quot;settings&quot;: {
+      &quot;orgPreferenceSettings&quot;: {
+          &quot;s1DesktopEnabled&quot;: true,
+          &quot;selfSetPasswordInApi&quot;: true,
+          &quot;s1EncryptedStoragePref2&quot;: false,
+          &quot;networksEnabled&quot;: true
+      }
+  }
+} 
+</code></pre>
+
+<hr />
+
+<p>run</p>
+
+<pre><code>sfdx force:org:create -f project-scratch-def.json -a myCaseCreationTest
+</code></pre>
+
+<p>You can either create a lightinng community or push the data from your scratch org if you already have one setup in a scratch org. If you are unfamilair with the process, you can refer to <a href="https://trailhead.salesforce.com/en/content/learn/projects/communities_theme_layout/create_community_theme">Create a Community</a>.</p>
+
+<p>I have additionaly setup the following github repository if you would like to push a sample community and load test data:
+<a href="https://github.com/gminero/joe-coffee">!Joe Coffee Repository</a></p>
+
+<hr />
+
+<h2 id="create-your-lwc">Create your LWC</h2>
+
+<blockquote>
+<p><a href="https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference_force_lightning.htm">lightning commads</a></p>
+</blockquote>
+
+<p>the following command will create a lightning web component in the appropriate directory:</p>
+
+<pre><code>sfdx force:lightning:component:create -n lwcContactSupport --type lwc -d force-app/main/default/lwc
+</code></pre>
+
+<figure>
+    <img src="/img/lwcLayoutForm.png"/> <figcaption>
+            <h4>layout form</h4>
+        </figcaption>
+</figure>
+
+
+<hr />
+
+<h2 id="component-markup">Component Markup</h2>
+
+<p>We will be using  standard <a href="https://developer.salesforce.com/docs/component-library/bundle/lightning-input/example">lighting-input</a>
+ &amp; <a href="https://developer.salesforce.com/docs/component-library/bundle/lightning-textarea/example">lightning-textarea</a> components for the form.</p>
+
+<p>Additionally, we will leverage <a href="https://developer.salesforce.com/docs/component-library/bundle/lightning-layout/example">lightning-layout</a> components
+ for the layout.</p>
+
+<pre><code>&lt;template&gt;
+    
+    &lt;lightning-layout multiple-rows=&quot;true&quot;&gt;
+        &lt;lightning-layout-item padding=&quot;around-small&quot;&gt;
+            &lt;div class=&quot;slds-text-heading_medium slds-m-bottom_medium&quot;&gt;
+                Sample LWC record edit form
+            &lt;/div&gt;
+        &lt;/lightning-layout-item&gt;
+        &lt;lightning-layout-item padding=&quot;around-small&quot; size=&quot;12&quot;&gt;
+            &lt;lightning-input class='required' label=&quot;Subject&quot;
+                name=&quot;subject&quot; onchange={logSomething}&gt; &lt;/lightning-input&gt;
+        &lt;/lightning-layout-item&gt;
+        &lt;lightning-layout-item padding=&quot;around-small&quot; size=&quot;12&quot;&gt;
+            &lt;lightning-textarea class='required' label=&quot;Description&quot;
+                name=&quot;description&quot; onchange={logSomething}&gt; &lt;/lightning-textarea&gt;
+        &lt;/lightning-layout-item&gt;
+                
+        &lt;lightning-layout-item padding=&quot;around-small&quot;&gt;
+                &lt;button type=&quot;button&quot; name=&quot;Submit Case&quot; value=&quot;Submit Case&quot; class=&quot;stretchButton slds-button slds-button_brand&quot; onclick={handleClick} &gt;Submit Case&lt;/button&gt;
+            &lt;/lightning-layout-item&gt;
+                
+    &lt;/lightning-layout&gt;
+        
+&lt;/template&gt;
+
+
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Important: in this component, the button does nothing!</th>
+</tr>
+</thead>
+
+<tbody>
+</tbody>
+</table>
+
+<hr />
+
+<h2 id="component-controller">Component Controller</h2>
+
+<blockquote>
+<p><a href="https://developer.salesforce.com/docs/component-library/documentation/lwc/events_create_dispatch">Create and Dispatch Events</a></p>
+</blockquote>
+
+<p>In the controller, we create and dispatch a custom event for the Aura component to handle.</p>
+
+<pre><code>		
+import { LightningElement, track } from 'lwc';
+
+let queryContext = {};
+
+export default class ContactSupportForm extends LightningElement {
+    @track clickedButtonLabel;
+    
+    handleClick(event) {
+        this.clickedButtonLabel = event.target.name;
+    }
+
+    logSomething(event){
+
+        const fieldChangeEvent = new CustomEvent('fieldchange', {
+           detail : {'fieldName': event.target.name,
+                    'fieldValue' : event.target.value}
+        });
+        // Fire the custom event
+        this.dispatchEvent(fieldChangeEvent);
+    }
+}
+
+</code></pre>
+
+<hr />
+
+<h2 id="create-your-aura-wrapper">Create your Aura Wrapper</h2>
+
+<p>We will create a lightning aura component that will wrap our lwc. The only purpose of the aura wrapper component is to fire application
+events for our other Aura compontent(s) to handle.</p>
+
+<h2 id="aura-component-markup">Aura Component Markup</h2>
+
+<p><code>selfService:caseCreateFieldChange</code> is a non-documented event, you can use it to pass field/value attribute names in between components
+in the context of the contact-support page in lightning communities.</p>
+
+<pre><code>&lt;!-- auraDomEventListener.cmp --&gt;
+&lt;aura:component implements=&quot;forceCommunity:availableForAllPageTypes&quot;&gt;
+    &lt;aura:attribute name=&quot;timer&quot; type=&quot;Integer&quot;/&gt;
+    &lt;aura:registerEvent name=&quot;appEvent&quot; type=&quot;selfService:caseCreateFieldChange&quot;/&gt;  
+    
+    &lt;lightning:card title=&quot;AuraDomEventListener&quot; iconName=&quot;custom:custom30&quot;&gt;
+        &lt;aura:set attribute=&quot;actions&quot;&gt;
+            &lt;span class=&quot;aura&quot;&gt;Aura Component&lt;/span&gt;
+        &lt;/aura:set&gt;
+        &lt;div class=&quot;slds-m-around_medium slds-align_absolute-center&quot;&gt;
+            &lt;lightning:layout&gt;
+                &lt;lightning:layoutItem size=&quot;12&quot; class=&quot;slds-box&quot;&gt;
+                    
+                    &lt;!-- This is the LWC component --&gt;
+                    &lt;c:contactSupportForm onfieldchange=&quot;{!c.handleFieldChange}&quot;/&gt;
+
+                &lt;/lightning:layoutItem&gt;
+            &lt;/lightning:layout&gt;
+        &lt;/div&gt;
+    &lt;/lightning:card&gt;
+&lt;/aura:component&gt;
+
+
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>Important: lwc events prepend an <code>on</code> to the name, this means that <code>fieldchange</code> becomes <code>onfieldchange</code> !</th>
+</tr>
+</thead>
+
+<tbody>
+</tbody>
+</table>
+
+<hr />
+
+<h2 id="aura-component-controller">Aura Component Controller</h2>
+
+<blockquote>
+<p><a href="https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/events_application_example.htm">Application Events</a></p>
+</blockquote>
+
+<p>In the controller, we fire the <code>caseCreateFieldChange</code> selfService event for the Aura Listener component to handle.</p>
+
+<pre><code>		
+({
+    handleFieldChange : function(cmp, event, helper) {       
+
+        var appevt = $A.get(&quot;e.selfService:caseCreateFieldChange&quot;);
+        appevt.setParams({
+            &quot;modifiedField&quot;: event.getParam('fieldName'),
+            &quot;modifiedFieldValue&quot;: event.getParam('fieldValue')
+        });
+        appevt.fire();
+    }
+})
+
+</code></pre>
+
+<hr />
+
+<figure>
+    <img src="/img/auraDomEventListener.png"/> <figcaption>
+            <h4>Aura Wrapper</h4>
+        </figcaption>
+</figure>
+
+
+<hr />
+
+<h2 id="create-your-aura-listener">Create your Aura Listener</h2>
+
+<p>The Aura Listener component is merely here for educational purposes, normally, you would actually have some sort
+of component that hadnles the event to trigger some kind of action. Here we will simply use the received evevnt parameters and display
+them in a box.</p>
+
+<h2 id="listener-component-markup">Listener Component Markup</h2>
+
+<pre><code>&lt;!-- auraListener.cmp --&gt;
+&lt;aura:component implements=&quot;forceCommunity:availableForAllPageTypes&quot;&gt;
+    &lt;aura:attribute name=&quot;receiver&quot; type=&quot;List&quot;/&gt;
+    &lt;aura:attribute name=&quot;objReceived&quot; type=&quot;Map&quot; default=&quot;{}&quot;/&gt;
+    &lt;aura:handler event=&quot;selfService:caseCreateFieldChange&quot; action=&quot;{!c.handleApplicationEvent}&quot;/&gt;
+    
+    &lt;lightning:card title=&quot;AuraAppEventListener&quot; iconName=&quot;custom:custom30&quot;&gt;
+        &lt;aura:set attribute=&quot;actions&quot;&gt;
+            &lt;span class=&quot;aura&quot;&gt;Aura Component&lt;/span&gt;
+        &lt;/aura:set&gt;
+        &lt;div class=&quot;slds-m-around_medium slds-align_absolute-center&quot;&gt;
+            &lt;lightning:layout&gt;
+                &lt;lightning:layoutItem size=&quot;5&quot; class=&quot;slds-box&quot;&gt;
+                    
+                    &lt;aura:iteration items=&quot;{!v.receiver}&quot; var=&quot;data&quot;&gt;
+                        &lt;div class=&quot;slds-page-header data-row&quot;&gt;
+                            {!data.subject}
+                        &lt;/div&gt;
+                      &lt;/aura:iteration&gt;
+
+                &lt;/lightning:layoutItem&gt;
+                &lt;lightning:layoutItem size=&quot;8&quot; class=&quot;slds-box&quot;&gt;
+                    
+                    &lt;aura:iteration items=&quot;{!v.receiver}&quot; var=&quot;data&quot;&gt;
+                        &lt;div class=&quot;slds-page-header data-row&quot;&gt;
+                            {!data.description}
+                        &lt;/div&gt;
+                      &lt;/aura:iteration&gt;
+
+                &lt;/lightning:layoutItem&gt;
+            &lt;/lightning:layout&gt;
+        &lt;/div&gt;
+    &lt;/lightning:card&gt;
+&lt;/aura:component&gt;
+
+</code></pre>
+
+<figure>
+    <img src="/img/auraListener.png"/> <figcaption>
+            <h4>Aura Listener</h4>
+        </figcaption>
+</figure>
+
+
+<h2 id="aura-listener-controller">Aura Listener Controller</h2>
+
+<p>In the Listener, we create a Set, in order to avoid duplicate key values, and then convert the set to an array to be able to
+work with the data in the component, since we did declare a List (Array) attribute, and not a Set.</p>
+
+<pre><code>		
+({
+    handleApplicationEvent : function(component, event, helper) {
+        let arraySet = new Set(); 
+        let objArray = component.get('v.receiver');
+        let objReceive = component.get('v.objReceived');
+
+        const field = event.getParam('modifiedField');
+        const fieldValue =  event.getParam('modifiedFieldValue');
+
+        objReceive[field] = fieldValue;
+        arraySet.add(objReceive);
+        objReceive = Array.from(arraySet);
+        
+        component.set('v.receiver', objReceive)
+
+    }
+})
+
+</code></pre>
+
+<p><img src="http://recordit.co/j5kdCSi7UF" alt="Firing and receiving the event" /></p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+        
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/lightning-web-component-community-case-creation/">Lightning Web Component Community Case Creation</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://gminero.github.io/" >
+    &copy; 2019 Salesforce Tek Talks
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

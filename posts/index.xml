@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Salesforce Tek Talks</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 07 Apr 2019 13:52:14 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 08 Apr 2019 10:52:13 -0400</lastBuildDate>
     
 	<atom:link href="https://gminero.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Lwc Aura Wrappers</title>
+      <link>https://gminero.github.io/posts/lwc-aura-wrappers/</link>
+      <pubDate>Mon, 08 Apr 2019 10:52:13 -0400</pubDate>
+      
+      <guid>https://gminero.github.io/posts/lwc-aura-wrappers/</guid>
+      <description>In this post, we will create an Aura wrapper component around or LWC that fires an APP event to an external Aura component. Wrapping your LWC will help you communicate with other aura components that cannot or have not been migrated to LWC.
+Getting Started You will need to get yourself setup with Salesforce-DX, if you haven&amp;rsquo;t had the chance to do so, this is a good time to get your environemnt setup since we will use it to deploy our LWC to a scratch org for testing.</description>
+    </item>
     
     <item>
       <title>Lightning Web Component Community Case Creation</title>
