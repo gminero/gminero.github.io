@@ -6,10 +6,19 @@
     <description>Recent content on Salesforce Tek Talks</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 08 Apr 2019 10:52:13 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 08 Apr 2019 15:52:41 -0400</lastBuildDate>
     
 	<atom:link href="https://gminero.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>About Me</title>
+      <link>https://gminero.github.io/about/about-me/</link>
+      <pubDate>Mon, 08 Apr 2019 15:52:41 -0400</pubDate>
+      
+      <guid>https://gminero.github.io/about/about-me/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Lwc Aura Wrappers</title>
