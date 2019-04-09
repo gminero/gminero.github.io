@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://gminero.github.io/posts/my-blog-journey/</loc>
+    <lastmod>2019-04-09T10:34:17-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://gminero.github.io/about/about-me/</loc>
     <lastmod>2019-04-08T15:52:41-04:00</lastmod>
   </url>
@@ -36,6 +41,12 @@
   <url>
     <loc>https://gminero.github.io/tags/aura-wrapper/</loc>
     <lastmod>2019-04-08T10:52:13-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://gminero.github.io/tags/blog/</loc>
+    <lastmod>2019-04-09T10:34:17-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -87,14 +98,26 @@
   </url>
   
   <url>
+    <loc>https://gminero.github.io/tags/other/</loc>
+    <lastmod>2019-04-09T10:34:17-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://gminero.github.io/tags/personal/</loc>
+    <lastmod>2019-04-09T10:34:17-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://gminero.github.io/posts/</loc>
-    <lastmod>2019-04-08T10:52:13-04:00</lastmod>
+    <lastmod>2019-04-09T10:34:17-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://gminero.github.io/</loc>
-    <lastmod>2019-04-08T15:52:41-04:00</lastmod>
+    <lastmod>2019-04-09T10:34:17-04:00</lastmod>
     <priority>0</priority>
   </url>
   

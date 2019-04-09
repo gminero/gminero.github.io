@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Salesforce Tek Talks</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 08 Apr 2019 10:52:13 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 09 Apr 2019 10:34:17 -0400</lastBuildDate>
     
 	<atom:link href="https://gminero.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>My Blog Journey</title>
+      <link>https://gminero.github.io/posts/my-blog-journey/</link>
+      <pubDate>Tue, 09 Apr 2019 10:34:17 -0400</pubDate>
+      
+      <guid>https://gminero.github.io/posts/my-blog-journey/</guid>
+      <description>2 Years ago I decided to start a personal blog to write about tech subjects (mostly salesforce related), In this post, I will take you through the journey that lead to what my blog is today.
+The Beggining 2 Years ago, I wanted to begin blogging about Salesforce subjects. I had recently discovered Heroku and was already familiar with Django. So for me it was a no brainer, Start a blog, use Django, Heroku and Voila&amp;hellip; Create content!</description>
+    </item>
     
     <item>
       <title>Lwc Aura Wrappers</title>
