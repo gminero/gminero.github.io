@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Salesforce Tek Talks</title>
-    <link>https://gminero.github.io/posts/</link>
-    <description>Recent content in Posts on Salesforce Tek Talks</description>
+    <title>Lwc on Salesforce Tek Talks</title>
+    <link>https://gminero.github.io/tags/lwc/</link>
+    <description>Recent content in Lwc on Salesforce Tek Talks</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 08 Apr 2019 10:52:13 -0400</lastBuildDate>
     
-	<atom:link href="https://gminero.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://gminero.github.io/tags/lwc/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>

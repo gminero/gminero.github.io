@@ -3,17 +3,116 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://gminero.github.io/about/about-me/</loc>
+    <lastmod>2019-04-08T15:52:41-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gminero.github.io/posts/lwc-aura-wrappers/</loc>
+    <lastmod>2019-04-08T10:52:13-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gminero.github.io/posts/lightning-web-component-community-case-creation/</loc>
+    <lastmod>2019-04-07T13:52:14-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gminero.github.io/speaker-sessions/case-deflection-from-a-z/</loc>
+    <lastmod>2018-06-15T16:40:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gminero.github.io/speaker-sessions/free-ai-powered-search-for-lightning-communities/</loc>
+    <lastmod>2017-06-20T16:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gminero.github.io/about/</loc>
+    <lastmod>2019-04-08T15:52:41-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://gminero.github.io/tags/aura-wrapper/</loc>
+    <lastmod>2019-04-08T10:52:13-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://gminero.github.io/tags/case-deflection/</loc>
+    <lastmod>2019-04-07T13:52:14-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://gminero.github.io/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://gminero.github.io/tags/coveo/</loc>
+    <lastmod>2017-06-20T16:00:00-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://gminero.github.io/tags/events/</loc>
+    <lastmod>2019-04-08T10:52:13-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://gminero.github.io/tags/free/</loc>
+    <lastmod>2017-06-20T16:00:00-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://gminero.github.io/tags/lighting-communities/</loc>
+    <lastmod>2018-06-15T16:40:00-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://gminero.github.io/tags/lightning-communities/</loc>
+    <lastmod>2019-04-07T13:52:14-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://gminero.github.io/tags/lwc/</loc>
+    <lastmod>2019-04-08T10:52:13-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://gminero.github.io/posts/</loc>
+    <lastmod>2019-04-08T10:52:13-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://gminero.github.io/</loc>
+    <lastmod>2019-04-08T15:52:41-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://gminero.github.io/tags/search/</loc>
+    <lastmod>2017-06-20T16:00:00-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://gminero.github.io/speaker-sessions/</loc>
+    <lastmod>2018-06-15T16:40:00-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://gminero.github.io/tags/</loc>
+    <lastmod>2019-04-08T10:52:13-04:00</lastmod>
     <priority>0</priority>
   </url>
   

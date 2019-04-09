@@ -6,9 +6,91 @@
     <description>Recent content in Tags on Salesforce Tek Talks</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Mon, 08 Apr 2019 10:52:13 -0400</lastBuildDate>
     
 	<atom:link href="https://gminero.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Aura Wrapper</title>
+      <link>https://gminero.github.io/tags/aura-wrapper/</link>
+      <pubDate>Mon, 08 Apr 2019 10:52:13 -0400</pubDate>
+      
+      <guid>https://gminero.github.io/tags/aura-wrapper/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Case Deflection</title>
+      <link>https://gminero.github.io/tags/case-deflection/</link>
+      <pubDate>Sun, 07 Apr 2019 13:52:14 -0400</pubDate>
+      
+      <guid>https://gminero.github.io/tags/case-deflection/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Coveo</title>
+      <link>https://gminero.github.io/tags/coveo/</link>
+      <pubDate>Tue, 20 Jun 2017 16:00:00 -0400</pubDate>
+      
+      <guid>https://gminero.github.io/tags/coveo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Events</title>
+      <link>https://gminero.github.io/tags/events/</link>
+      <pubDate>Mon, 08 Apr 2019 10:52:13 -0400</pubDate>
+      
+      <guid>https://gminero.github.io/tags/events/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Free</title>
+      <link>https://gminero.github.io/tags/free/</link>
+      <pubDate>Tue, 20 Jun 2017 16:00:00 -0400</pubDate>
+      
+      <guid>https://gminero.github.io/tags/free/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lighting Communities</title>
+      <link>https://gminero.github.io/tags/lighting-communities/</link>
+      <pubDate>Fri, 15 Jun 2018 16:40:00 -0400</pubDate>
+      
+      <guid>https://gminero.github.io/tags/lighting-communities/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lightning Communities</title>
+      <link>https://gminero.github.io/tags/lightning-communities/</link>
+      <pubDate>Sun, 07 Apr 2019 13:52:14 -0400</pubDate>
+      
+      <guid>https://gminero.github.io/tags/lightning-communities/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lwc</title>
+      <link>https://gminero.github.io/tags/lwc/</link>
+      <pubDate>Mon, 08 Apr 2019 10:52:13 -0400</pubDate>
+      
+      <guid>https://gminero.github.io/tags/lwc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Search</title>
+      <link>https://gminero.github.io/tags/search/</link>
+      <pubDate>Tue, 20 Jun 2017 16:00:00 -0400</pubDate>
+      
+      <guid>https://gminero.github.io/tags/search/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lighting Communities on Salesforce Tek Talks</title>
+    <link>https://gminero.github.io/tags/lighting-communities/</link>
+    <description>Recent content in Lighting Communities on Salesforce Tek Talks</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 15 Jun 2018 16:40:00 -0400</lastBuildDate>
+    
+	<atom:link href="https://gminero.github.io/tags/lighting-communities/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Case Deflection from A-Z</title>
+      <link>https://gminero.github.io/speaker-sessions/case-deflection-from-a-z/</link>
+      <pubDate>Fri, 15 Jun 2018 16:40:00 -0400</pubDate>
+      
+      <guid>https://gminero.github.io/speaker-sessions/case-deflection-from-a-z/</guid>
+      <description>French Touch Dreamin 2019 Case Deflection from A-Z
+During this speaker session I did an overview of customizing a complete Contact Support Form alongside a Custom Deflection component in Lightning Communities.</description>
+    </item>
+    
+  </channel>
+</rss>
