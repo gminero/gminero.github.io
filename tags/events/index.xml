@@ -18,7 +18,7 @@
       
       <guid>https://gminero.github.io/posts/lwc-aura-wrappers/</guid>
       <description>In this post, we will create an Aura wrapper component around a LWC that fires an APP event to an external Aura component. Wrapping your LWC will help you communicate with other aura components that cannot or have not been migrated to LWC.
-Getting Started You will need to get yourself setup with Salesforce-DX, if you haven&amp;rsquo;t had the chance to do so, this is a good time to get your environemnt setup since we will use it to deploy our LWC to a scratch org for testing.</description>
+Getting Started You will need to get yourself setup with Salesforce-DX, if you haven&amp;rsquo;t had the chance to do so, this is a good time to get your environment setup since we will use it to deploy our LWC to a scratch org for testing.</description>
     </item>
     
   </channel>

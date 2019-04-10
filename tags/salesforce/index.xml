@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Salesforce on Salesforce Tek Talks</title>
+    <link>https://gminero.github.io/tags/salesforce/</link>
+    <description>Recent content in Salesforce on Salesforce Tek Talks</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 09 Apr 2019 21:19:21 -0400</lastBuildDate>
+    
+	<atom:link href="https://gminero.github.io/tags/salesforce/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Building a Lwc Popover</title>
+      <link>https://gminero.github.io/posts/building-a-lwc-popover/</link>
+      <pubDate>Tue, 09 Apr 2019 21:19:21 -0400</pubDate>
+      
+      <guid>https://gminero.github.io/posts/building-a-lwc-popover/</guid>
+      <description>TIL; How to create a LWC Popover for displaying related records.
+In this post, we will create a popover that displays related record details within an SLDS Bluprint of a Data Table using a Record View Form.
+Getting Started You will need to get yourself setup with Salesforce-DX, and will use Salesforce&amp;rsquo;s Ursus Park Sample repository which can be cloned from Github.
+Steps To do  Clone the Ursus Park sample app Create the data table  Data table template Data table controller  Create a Popover Component  Popover template Popover controller Popover css  Embed the Popover component in the table template Test it  Clone the Ursus Park sample app  build-apps-with-lwc</description>
+    </item>
+    
+  </channel>
+</rss>

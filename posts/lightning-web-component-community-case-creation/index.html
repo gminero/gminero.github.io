@@ -31,14 +31,14 @@
     
 
     <meta property="og:title" content="Lightning Web Component Community Case Creation" />
-<meta property="og:description" content="Learn to create alwc a case creation form with redirection" />
+<meta property="og:description" content="Learn to create a lwc a case creation form with redirection" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gminero.github.io/posts/lightning-web-component-community-case-creation/" />
 <meta property="article:published_time" content="2019-04-07T13:52:14-04:00"/>
 <meta property="article:modified_time" content="2019-04-07T13:52:14-04:00"/>
 
 <meta itemprop="name" content="Lightning Web Component Community Case Creation">
-<meta itemprop="description" content="Learn to create alwc a case creation form with redirection">
+<meta itemprop="description" content="Learn to create a lwc a case creation form with redirection">
 
 
 <meta itemprop="datePublished" content="2019-04-07T13:52:14-04:00" />
@@ -50,7 +50,7 @@
 <meta itemprop="keywords" content="lwc,case deflection,lightning communities," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Lightning Web Component Community Case Creation"/>
-<meta name="twitter:description" content="Learn to create alwc a case creation form with redirection"/>
+<meta name="twitter:description" content="Learn to create a lwc a case creation form with redirection"/>
 
   </head>
 
@@ -133,11 +133,11 @@
 
     <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
 
-<p>In this post we will create a case creation form, using the <a href="https://developer.salesforce.com/docs/component-library/bundle/lightning-record-edit-form/documentation">lightning-record-edit-form</a> component alongise proper redirection to the record page once the button has been submitted.</p>
+<p>In this post we will create a case creation form, using the <a href="https://developer.salesforce.com/docs/component-library/bundle/lightning-record-edit-form/documentation">lightning-record-edit-form</a> component alongside proper redirection to the record page once the button has been submitted.</p>
 
 <h2 id="getting-started">Getting Started</h2>
 
-<p>You will need to get yourself setup with <a href="https://trailhead.salesforce.com/en/content/learn/trails/sfdx_get_started">Salesforce-DX</a>, if you haven&rsquo;t had the chance to do so, this is a good time to get your environemnt setup since we will use it to deploy our LWC to a scratch org for testing.</p>
+<p>You will need to get yourself setup with <a href="https://trailhead.salesforce.com/en/content/learn/trails/sfdx_get_started">Salesforce-DX</a>, if you haven&rsquo;t had the chance to do so, this is a good time to get your environment setup since we will use it to deploy our LWC to a scratch org for testing.</p>
 
 <h2 id="steps-to-do">Steps To do</h2>
 
@@ -182,14 +182,14 @@
 <pre><code>sfdx force:org:create -f project-scratch-def.json -a myCaseCreationTest
 </code></pre>
 
-<p>You can either create a lightinng community or push the data from your scratch org if you already have one setup in a scratch org. If you are unfamilair with the process, you can refer to <a href="https://trailhead.salesforce.com/en/content/learn/projects/communities_theme_layout/create_community_theme">Create a Community</a>.</p>
+<p>You can either create a lightning community or push the data from your scratch org if you already have one setup in a scratch org. If you are unfamiliar with the process, you can refer to <a href="https://trailhead.salesforce.com/en/content/learn/projects/communities_theme_layout/create_community_theme">Create a Community</a>.</p>
 
 <hr />
 
 <h2 id="create-your-lwc">Create your LWC</h2>
 
 <blockquote>
-<p><a href="https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference_force_lightning.htm">lightning commads</a></p>
+<p><a href="https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference_force_lightning.htm">lightning commands</a></p>
 </blockquote>
 
 <p>the following command will create a lightning web component in the appropriate directory:</p>
@@ -240,7 +240,7 @@
 
 </code></pre>
 
-<p>Notice the onsuccess event handler we added to the component. We will use it to trigger the navigation once the case has successfuly been created via the <a href="https://developer.salesforce.com/docs/atlas.en-us.uiapi.meta/uiapi/ui_api_get_started_supported_objects.htm">User Interface API</a>.</p>
+<p>Notice the onsuccess event handler we added to the component. We will use it to trigger the navigation once the case has successfully been created via the <a href="https://developer.salesforce.com/docs/atlas.en-us.uiapi.meta/uiapi/ui_api_get_started_supported_objects.htm">User Interface API</a>.</p>
 
 <hr />
 

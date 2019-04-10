@@ -6,10 +6,22 @@
     <description>Recent content in Posts on Salesforce Tek Talks</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 09 Apr 2019 10:34:17 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 09 Apr 2019 21:19:21 -0400</lastBuildDate>
     
 	<atom:link href="https://gminero.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Building a Lwc Popover</title>
+      <link>https://gminero.github.io/posts/building-a-lwc-popover/</link>
+      <pubDate>Tue, 09 Apr 2019 21:19:21 -0400</pubDate>
+      
+      <guid>https://gminero.github.io/posts/building-a-lwc-popover/</guid>
+      <description>TIL; How to create a LWC Popover for displaying related records.
+In this post, we will create a popover that displays related record details within an SLDS Bluprint of a Data Table using a Record View Form.
+Getting Started You will need to get yourself setup with Salesforce-DX, and will use Salesforce&amp;rsquo;s Ursus Park Sample repository which can be cloned from Github.
+Steps To do  Clone the Ursus Park sample app Create the data table  Data table template Data table controller  Create a Popover Component  Popover template Popover controller Popover css  Embed the Popover component in the table template Test it  Clone the Ursus Park sample app  build-apps-with-lwc</description>
+    </item>
     
     <item>
       <title>My Blog Journey</title>
@@ -28,7 +40,7 @@ The Beggining 2 Years ago, I wanted to begin blogging about Salesforce subjects.
       
       <guid>https://gminero.github.io/posts/lwc-aura-wrappers/</guid>
       <description>In this post, we will create an Aura wrapper component around a LWC that fires an APP event to an external Aura component. Wrapping your LWC will help you communicate with other aura components that cannot or have not been migrated to LWC.
-Getting Started You will need to get yourself setup with Salesforce-DX, if you haven&amp;rsquo;t had the chance to do so, this is a good time to get your environemnt setup since we will use it to deploy our LWC to a scratch org for testing.</description>
+Getting Started You will need to get yourself setup with Salesforce-DX, if you haven&amp;rsquo;t had the chance to do so, this is a good time to get your environment setup since we will use it to deploy our LWC to a scratch org for testing.</description>
     </item>
     
     <item>
@@ -37,8 +49,8 @@ Getting Started You will need to get yourself setup with Salesforce-DX, if you h
       <pubDate>Sun, 07 Apr 2019 13:52:14 -0400</pubDate>
       
       <guid>https://gminero.github.io/posts/lightning-web-component-community-case-creation/</guid>
-      <description>In this post we will create a case creation form, using the lightning-record-edit-form component alongise proper redirection to the record page once the button has been submitted.
-Getting Started You will need to get yourself setup with Salesforce-DX, if you haven&amp;rsquo;t had the chance to do so, this is a good time to get your environemnt setup since we will use it to deploy our LWC to a scratch org for testing.</description>
+      <description>In this post we will create a case creation form, using the lightning-record-edit-form component alongside proper redirection to the record page once the button has been submitted.
+Getting Started You will need to get yourself setup with Salesforce-DX, if you haven&amp;rsquo;t had the chance to do so, this is a good time to get your environment setup since we will use it to deploy our LWC to a scratch org for testing.</description>
     </item>
     
   </channel>

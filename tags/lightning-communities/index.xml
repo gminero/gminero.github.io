@@ -17,8 +17,8 @@
       <pubDate>Sun, 07 Apr 2019 13:52:14 -0400</pubDate>
       
       <guid>https://gminero.github.io/posts/lightning-web-component-community-case-creation/</guid>
-      <description>In this post we will create a case creation form, using the lightning-record-edit-form component alongise proper redirection to the record page once the button has been submitted.
-Getting Started You will need to get yourself setup with Salesforce-DX, if you haven&amp;rsquo;t had the chance to do so, this is a good time to get your environemnt setup since we will use it to deploy our LWC to a scratch org for testing.</description>
+      <description>In this post we will create a case creation form, using the lightning-record-edit-form component alongside proper redirection to the record page once the button has been submitted.
+Getting Started You will need to get yourself setup with Salesforce-DX, if you haven&amp;rsquo;t had the chance to do so, this is a good time to get your environment setup since we will use it to deploy our LWC to a scratch org for testing.</description>
     </item>
     
   </channel>
